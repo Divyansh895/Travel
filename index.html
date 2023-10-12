@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="style.css">
   <meta http-equiv="X-pUA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+
 </head> 
 
 <audio autoplay loop volume="1.0">  
@@ -16,29 +18,26 @@
   <source src="lemonde.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
-
-<body>
+ 
+<body> 
   <!-- //navbar  -->
-  <header>
-    <nav id="navbar"> 
-      <a href="#home"><img src="logo.png" alt="Travel" class="logo"></a>  
+  <header class="hide">
+    <nav id="navbar">
+      <a href="#home"><img src="logo.png" alt="Travel" class="logo"></a>
+
       <div class="hamburger">
-        <i class="fas fa-bars"></i>
-    </div>
-     
-      <ul>
-        <li>
-          <a href="#home" id="home1">Home</a>
-        </li>   
-        <li> 
-          <a href="#explore" id="explore1">Explore</a>
-        </li>
-        <li>
-          <a href="#faq" id="faq1">FAQ</a>
-        </li>
-        <li>
-          <a href="#about" id="about1">About Us</a>
-        </li>
+        <i class="fas fa-bars"></i> 
+      </div> 
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Discover...">
+        <i id="search-icon" class="fas fa-search"></i>
+      </div>
+      <ul > 
+        <li><a href="#home" id="home1">Home</a></li>
+        <li><a href="#explore" id="explore1">Explore</a></li> 
+        <li><a href="#yuva" id="about1">Club</a></li>   
+        <li><a href="#faq" id="faq1">FAQ</a></li>  
+        <li><a href="#about" id="about1">About</a></li>    
       </ul>
     </nav>
   </header>
@@ -46,7 +45,7 @@
   
 <section id="home">
 <main > 
-  <div class="vigneete"></div>
+  <div class="vigneete hide"></div>
   <img src="img/background.png" data-speedx="0.3" data-speedy="0.38" data-speedz="0" data-distance="-200" class="parallax bg-img">
 
   <img src="img/fog_7.png" data-speedx="0.27" data-speedy="0.32" data-speedz="0" data-distance="850" class="parallax fog-7">
@@ -63,7 +62,6 @@
   <div class="text parallax" data-speedx="0.07"  data-speedy="0.07 " data-speedz="0" data-distance="0">
     <h2>Youva</h2> 
     <h1>tourism</h1>  
-    <h4>"Embark on Dreams, Explore Reality: Your Journey, Our Expertise!"</h4>
   </div> 
   
   <img src="img/mountain_6.png" data-speedx="0.065"  data-speedy="0.05" data-speedz="0.05" data-distance="2300"  class="parallax mountain-6">
@@ -84,7 +82,7 @@
   
   <img src="img/mountain_1.png" data-speedx="0.027"  data-speedy="0.018" data-speedz="0.53" data-distance="4000" class="parallax mountain-1"> 
   
-  <img src="img/sun_rays.png"  class="sun-rays">
+  <img src="img/sun_rays.png"  class="sun-rays hidexccxcxcccc">
   
   <img src="img/black_shadow.png" class="black-shadow"> 
   
@@ -96,16 +94,16 @@
 
   <!-- //cards -->
 <section id="explore">  
-<h1 class="title">Planning Your Own Travel ?</h1>  
-<h2 class="title">We Are Right Here To Help You</h2>  
-
+<h1 class="title" style="color: white;">Planning Your Own Travel ?</h1>  
+<h2 class="title" style="color: gold;">We Are Right Here To Help You</h2>  
+ 
 <div id="app" class="container">
   <card onclick="redirectToBeach()" data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
     <h1 slot="header">Beaches</h1>
     <p slot="content">Sun-kissed sands, crystal waters, and endless coastal bliss beckon travelers.</p>
   </card>
                         
-  <card onclick="redirectToMountain()" data-image="images/mountain.jpg">   
+  <card onclick="redirectToMountain()" data-image="images/mountain.jpg">    
     <h1 slot="header">Mountains</h1> 
     <p slot="content">"Discover towering peaks, serene landscapes, adventure, and tranquility in majestic mountain ranges worldwide."</p> 
   </card>
@@ -115,11 +113,153 @@
   </card> 
 </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
-
-
-
+<br><br><br> <br><br><br>  
 </section>   
+<hr>  <br><br><br> <br><br><br>  
+
+<section id="yuva"> 
+  <div class="accordion1">
+    <div class="accordion1-text"> 
+      <div class="title">What is Yuva Tourism Club(YTC)?</div><br><br><br>    
+      <div style="letter-spacing: 1px;">   
+      <p>Yuva Tourism Club (YTC) is an initiative of the Ministry of Tourism, Government of India, designed to create interest, awareness, and a sense of responsibility towards the country's natural and cultural heritage/tourism among children and youth. The vision is to nurture and develop young ambassadors of Indian tourism who would become aware of tourism possibilities in India, appreciate the rich cultural heritage, and develop an interest and passion for tourism.</p>
+      
+      <p>YTC is open to all students aged 10-25 years. The clubs are registered with the Ministry of Tourism and are affiliated with the State Tourism Departments. Each club is managed by a Coordinator, typically a teacher or staff member of the school/college.</p>
+      
+      <p>The YTC clubs organize various activities to promote tourism awareness and appreciation among the youth. These activities include:</p>
+      <br>
+      <ul style="font-weight: 900;"> 
+        <li>Field trips to tourist destinations</li><br>
+        <li>Heritage walks</li><br>
+        <li>Cultural performances</li><br>
+        <li>Photo exhibitions</li><br>
+        <li>Film screenings</li><br>
+        <li>Quiz contests and debates</li><br>
+        <li>Essay writing and painting competitions</li><br>
+        <li>Awareness campaigns on responsible tourism</li><br>
+      </ul>
+      
+      <p>The YTC clubs also play a crucial role in promoting sustainable tourism practices. Members are encouraged to adopt eco-friendly travel habits and to be respectful of the local environment and culture.</p>
+      
+      <p>Joining a Yuva Tourism Club offers numerous benefits:</p>
+      <br> 
+      <ul style="font-weight: 900;"> 
+        <li>Learn about the tourism industry and its potential as a career option</li><br>
+        <li>Develop skills and talents in areas such as tourism marketing, event management, and customer service</li><br>
+        <li>Gain exposure to different cultures and traditions</li><br>
+        <li>Make new friends and network with other young people interested in tourism</li><br>
+        <li>Contribute to the promotion of tourism in India</li><br>
+      </ul>
+      
+      <p>If you are a student between the ages of 10 and 25, we encourage you to join a Yuva Tourism Club. It is an excellent way to learn, grow, and make a difference.</p>
+      </div> 
+    </div>
+  </div>
+</section>
+ 
+<br><br><br> <br><br><br>  
+
+<hr><br><br><br> <br><br><br>   
+
+<!--//faq-->
+<section id="faq">
+  <div class="accordion">
+    <div class="image-box">
+      <img src="images/mainImg.png" alt="Accordion Image">
+    </div>
+    <div class="accordion-text">
+      <div class="title">FAQ's</div> 
+    <ul class="faq-text">
+      <li>
+        <div class="question-arrow">
+          <span class="question">What is Yuva Tourism Club (YTC) and what is its purpose?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>Yuva Tourism Club (YTC) is an initiative of the Ministry of Tourism, Government of India, designed to create interest, awareness, and a sense of responsibility towards the country's natural and cultural heritage/tourism among children and youth. The vision is to nurture and develop young ambassadors of Indian tourism who would become aware of tourism possibilities in India, appreciate the rich cultural heritage, and develop an interest and passion for tourism.</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">Who can join Yuva Tourism Club?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>YTC is open to all students aged 10-25 years. The clubs are registered with the Ministry of Tourism and are affiliated with the State Tourism Departments. Each club is managed by a Coordinator, typically a teacher or staff member of the school/college.</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">What activities are organized by Yuva Tourism Clubs to promote tourism awareness among youth?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>YTC clubs organize various activities, including field trips to tourist destinations, heritage walks, cultural performances, photo exhibitions, film screenings, quiz contests, debates, essay writing, painting competitions, and awareness campaigns on responsible tourism. These activities aim to promote tourism awareness and appreciation among the youth.</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">How do Yuva Tourism Clubs contribute to sustainable tourism practices?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>YTC clubs play a crucial role in promoting sustainable tourism practices. Members are encouraged to adopt eco-friendly travel habits and to be respectful of the local environment and culture. The clubs raise awareness about responsible tourism and emphasize the importance of preserving the natural and cultural heritage of tourist destinations.</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">What are the benefits of joining a Yuva Tourism Club?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>Joining a Yuva Tourism Club offers numerous benefits, including learning about the tourism industry and its potential as a career option, developing skills in areas such as tourism marketing, event management, and customer service, gaining exposure to different cultures and traditions, making new friends, networking with other young people interested in tourism, and contributing to the promotion of tourism in India. It provides an excellent opportunity for students to learn, grow, and make a positive impact.</p>
+        <span class="line"></span>
+      </li> 
+    </ul>
+    </div>
+  </div> 
+</section>
+<br><br><br> <br><br><br>  
+
+<hr><br><br><br> <br><br><br>   
+
+
+<!--footer-->
+<section id="about">
+  <footer>
+  <div class="content">
+    <div class="left box">
+      <div class="upper">
+        <div class="topic">About us</div>
+        <p>Welcome to Youva Tourism, where young adventurers embark on transformative journeys. Discover vibrant cultures, eco-friendly practices, and meaningful experiences. Our curated guides and personalized recommendations empower you to explore responsibly, fostering a sense of global citizenship. Join us for life-changing adventures and embrace the beauty of diversity.</p>
+      </div>
+      <div class="lower">
+        <div class="topic">Contact us</div>
+        <div class="email">
+          <a href="https://mail.google.com/"><i class="fas fa-envelope"></i>coolgamerz905@gmail.com</a> 
+        </div>
+      </div> 
+    </div>
+
+    <div class="right box">
+      <div class="topic">Subscribe us</div>
+      <form action="#">
+        <input type="text" placeholder="Enter email address">
+        <input type="submit" name="" value="Send">
+        <div class="media-icons">
+          <a href="https://www.instagram.com/coolgamerzx/"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@coolgamerzx7414?si=IBF_FLGihaRGQ0td"><i class="fab fa-youtube"></i></a>
+        </div>
+      </form> 
+    </div>
+  </div>
+  <div class="bottom"> 
+    <p>Copyright © 2023 <a href="#">Divyansh Patel</a> All rights reserved</p>
+  </div>
+  <br><br><br> <br><br><br>  
+
+<hr>  <br><br><br> 
+</footer>
+ </section> 
+
+
+
+
 
 
 
@@ -134,10 +274,12 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
   <script src="js/gsap.min.js"></script>
   <script src="js/app.js"></script> 
-</style> 
+</style>  
 
 
 <script>
+
+  
   document.querySelector('.hamburger').addEventListener('click', function() {
     document.querySelector('nav ul').classList.toggle('show');
   });
@@ -153,78 +295,119 @@
           behavior: 'smooth'
         });
       }
-    });  
+    });
   });
 
   function redirectToBeach() {
-    window.location.href = '/3D-Parallax-Website-in-JavaScript-main/beaches/beaches1.html';
+    window.location.href = 'beaches1.html';
   }
 
   function redirectToMountain() {
-    window.location.href = '/3D-Parallax-Website-in-JavaScript-main/mountains/mountain.html';
+    window.location.href = 'mountain.html';
   }
 
   function redirectToCity() {
-    window.location.href = '/3D-Parallax-Website-in-JavaScript-main/city/city.html';
+    window.location.href = 'city.html';
   }
 
-  document.querySelector('.hamburger').addEventListener('click', function() {
-    document.querySelector('nav ul').classList.toggle('show');
-});
- 
-// Add click event listener to the hamburger icon only once
-document.querySelector('.hamburger i').addEventListener('click', function() {
-    const navbar = document.getElementById('navbar');
-    navbar.classList.toggle('show');
-});
+  let isHamburgerClicked = false;
 
-// Add click event listener to navigation links inside the expanded menu
-document.querySelectorAll('#navbar ul li a').forEach(link => {
-    link.addEventListener('click', function() {
-        const navbar = document.getElementById('navbar');
-        navbar.classList.remove('show'); // Close the expanded menu
-    });
-});
-
-
-
-
- 
-
-let isHamburgerClicked = false; // Variable to track hamburger button click
-
-// Function to handle the visibility of the expanded header
-function handleExpandedHeader() {
+  function handleExpandedHeader() {
     const navbar = document.getElementById('navbar');
     const hamburgerIcon = document.querySelector('.hamburger i');
 
-    // Check if the window width is greater than or equal to 768 pixels
     if (window.innerWidth >= 768) {
-        navbar.classList.remove('show'); // Hide the expanded header
+      navbar.classList.remove('show');
     } else {
-        // Show the expanded header only if the hamburger button was clicked
-        if (isHamburgerClicked) {
-            navbar.classList.add('show');
-        } else {
-            navbar.classList.remove('show');
-        }
+      if (isHamburgerClicked) {
+        navbar.classList.add('show');
+      } else {
+        navbar.classList.remove('show');
+      }
     }
-}
+  }
 
-// Event listener for the hamburger icon click
-document.querySelector('.hamburger i').addEventListener('click', function() {
+  document.querySelector('.hamburger i').addEventListener('click', function() {
     const navbar = document.getElementById('navbar');
     navbar.classList.toggle('show');
-    this.classList.toggle('active'); // Toggle active class for the hamburger icon
-    isHamburgerClicked = !isHamburgerClicked; // Toggle the hamburger click status
-    handleExpandedHeader(); // Call the function to handle expanded header visibility
+    this.classList.toggle('active');
+    isHamburgerClicked = !isHamburgerClicked;
+    handleExpandedHeader();
+  });
+
+  window.addEventListener('resize', handleExpandedHeader);
+
+  //search bar explore//
+
+  const searchInput = document.getElementById('search-input');
+const searchIcon = document.getElementById('search-icon');
+
+searchIcon.addEventListener('click', function() {
+  const searchTerm = searchInput.value.toLowerCase();
+  
+
+  const validExploreTerms = ['mountains', 'cities', 'beaches', "adventure travel", "backpacking", "boutique hotels", "camping","family vacation", "festival tourism",
+        "group tours", "historical sites", "holiday packages", "outdoor activities", "resorts", "road trips",'beach','mountain','city','country','travel','explore','destination'];
+  
+
+  const validFAQTerms = ['question1', 'question2', 'question3', 'faq', 'help', 'assistance', 'enquiry', 'query', 'problem', 'solution','ques','question','answer','questions','answers','faq','frequently asked questions','frequently asked question','FAQ','Frequently Asked Questions','Ques'];
+
+
+  const validYuvaClubsTerms = ['club1', 'club2', 'youth', 'activities', 'community', 'events', 'members','about yuva','youva','Youva Clubs','About Youva Clubs','Yuva Clubs','yuva','yuva club','about yuva club','club','Yuva','About Youva Clubs Details'];
+
+
+  const validAboutUsTerms = ['mission', 'history', 'team', 'vision', 'values', 'company', 'organization','about','contact','contact us','information','team','more about us','more','Contact Us','About us ','Contact Information','details','email','e-mail address'];
+
+  if (validExploreTerms.includes(searchTerm)) { 
+
+    const exploreSection = document.getElementById('explore');
+    exploreSection.scrollIntoView({ behavior: 'smooth' });
+  } else if (validFAQTerms.includes(searchTerm)) {
+
+    const faqSection = document.getElementById('faq');
+    faqSection.scrollIntoView({ behavior: 'smooth' });
+  } else if (validYuvaClubsTerms.includes(searchTerm)) {
+
+    const yuvaClubsSection = document.getElementById('yuva');
+    yuvaClubsSection.scrollIntoView({ behavior: 'smooth' });
+  } else if (validAboutUsTerms.includes(searchTerm)) {
+
+    const aboutUsSection = document.getElementById('about'); 
+    aboutUsSection.scrollIntoView({ behavior: 'smooth' });
+  } else {
+
+    searchInput.value = 'Invalid search term!';
+    searchInput.style.color = 'red'; 
+    searchInput.classList.add('shake'); 
+    setTimeout(() => {
+      searchInput.classList.remove('shake'); 
+      searchInput.value = ''; 
+      searchInput.style.color = 'black'; 
+    }, 2000); 
+  }
 });
-
-// Event listener for window resize
-window.addEventListener('resize', handleExpandedHeader);
-
  
-</script>
+
+
+
+
+/*faq*/
+let li = document.querySelectorAll(".faq-text li");
+    for (var i = 0; i < li.length; i++) {
+      li[i].addEventListener("click", (e)=>{
+        let clickedLi;
+        if(e.target.classList.contains("question-arrow")){
+          clickedLi = e.target.parentElement;
+        }else{
+          clickedLi = e.target.parentElement.parentElement;
+        }
+       clickedLi.classList.toggle("showAnswer");
+      });
+    } 
+
+
+
+</script> 
 </body> 
 </html>
 

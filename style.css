@@ -474,7 +474,81 @@ nav li {
       width: 98%;
     }
   }
+
    
+
+
+/* Suggestions */
+/* Suggestions */
+#search-suggestions {
+  display: none;
+  position: absolute;
+  width: calc(100% - 20px);
+  max-width: 300px;
+  border: 1px solid #ccc;  padding: 10px;
+  top: 45px; /* Adjust the top position to place suggestions below the search box */
+  z-index: 9999; 
+  background-color: whitesmoke;  
+  border-radius: 10px;   
+}
+
+.suggestion-item {   
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav{
+  z-index: 1;  
+}
+
+.suggestion-item:hover {
+  border-radius: 10px;  
+  transition: 0.5s ease-in-out;    
+  background-color: #a8a4a4;
+  font-size: 1.5em;     
+}
+
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+  nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      background-color: #333;
+      position: absolute;
+      top: calc(100% + 10px); /* Adjusted top position */
+      left: 0;
+      z-index: 1;
+  }
+
+  nav ul.show {
+      display: flex;
+  }
+
+  nav li {
+      margin: 10px 0;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  /* Show the search bar in the expanded header for smaller screens */
+  nav#navbar.show .search-bar {
+      display: flex;
+  }
+}
+ 
+
+
 
 
 

@@ -108,7 +108,7 @@ function move() {
 		}, 850);
 		setTimeout(() => {
 			click = true;
-		}, 1700);
+		}, 1700); 
 	}
 }
 

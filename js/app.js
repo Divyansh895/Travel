@@ -76,6 +76,15 @@ timeline.from(
   "3"
 )
 .from(
+  ".text h4",     
+  {
+    y: -150,
+    opacity:0,
+    duration:1.5,
+  },
+  "3"
+)
+.from(
   ".hide",
   {
     opacity:0,

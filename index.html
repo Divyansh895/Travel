@@ -13,7 +13,7 @@
 
 
 </head> 
-
+ 
 <audio autoplay loop volume="1.0">  
   <source src="backgroundmusicmain.mp3" type="audio/mpeg"> 
   Your browser does not support the audio element.
@@ -72,7 +72,8 @@
   <div class="text parallax" data-speedx="0.07"  data-speedy="0.07 " data-speedz="0" data-distance="0">
    <h2>Yuva</h2> 
     <h1>tourism</h1>  
-  </div> 
+    <h4>Boundless Horizons: Explore the World with Yuva Tourism!</h4> 
+  </div>  
   
   <img src="img/mountain_6.png" data-speedx="0.065"  data-speedy="0.05" data-speedz="0.05" data-distance="2300"  class="parallax mountain-6">
   
@@ -92,7 +93,7 @@
   
   <img src="img/mountain_1.png" data-speedx="0.027"  data-speedy="0.018" data-speedz="0.53" data-distance="4000" class="parallax mountain-1"> 
   
-  <img src="img/sun_rays.png"  class="sun-rays hidexccxcxcccc">
+  <img src="img/sun_rays.png"  class="sun-rays hide"> 
   
   <img src="img/black_shadow.png" class="black-shadow"> 
   
@@ -108,7 +109,7 @@
 <h2 class="title" style="color: gold;">We Are Right Here To Help You</h2>  
  
 <div id="app" class="container">
-  <card onclick="redirectToBeach()" data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+  <card onclick="redirectToBeach()" data-image="beach-card.jpg"> 
     <h1 slot="header">Beaches</h1>
     <p slot="content">Sun-kissed sands, crystal waters, and endless coastal bliss beckon travelers.</p>
   </card>
@@ -185,8 +186,8 @@
 <br><br><br> <br><br><br>  
 
 <hr> 
-<!--Gallery-->
-
+<!--Gallery--> 
+<section id="gallery1">
 <div id="gallery" class="container-fluid">  
   <img src="image1.avif" class="img-responsive"> 
   <img src="image1.jpg" class="img-responsive">
@@ -201,7 +202,7 @@
   <img src="image4.jpg" class="card img-responsive">
   <img src="image5.jpg" class="img-responsive"> 
   <img src="image6.jpg" class="img-responsive">
-  <img src="image7.jpg" class="img-responsive">  
+  <img src="image7.jpg" class="img-responsive">   
   <img src="image8.jpg" class="img-responsive">  
 <img src="image9.jpg" class="img-responsive"> 
 <img src="image10.jpg" class="img-responsive"> 
@@ -209,11 +210,16 @@
 <img src="spain_bg.jpg" class="img-responsive"> 
 <img src="sanfrancisco.jpg" class="img-responsive"> 
 
+<img src="image13.jpg" class="img-responsive"> 
+<img src="image14.jpg" class="img-responsive">  
+<img src="image15.jpg" class="img-responsive">   
+
+
 </div>
 
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
+ 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-body">
@@ -222,6 +228,8 @@
 
   </div>
 </div>
+</section> 
+
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script><script  src="./script.js"></script>
@@ -313,12 +321,13 @@
         <div class="media-icons">
           <a href="https://www.instagram.com/coolgamerzx/"><i class="fab fa-instagram"></i></a>
           <a href="https://youtube.com/@coolgamerzx7414?si=IBF_FLGihaRGQ0td"><i class="fab fa-youtube"></i></a>
+          <a href="credits.html"><i class="fa-solid fa-film" style="color: #ffffff;"></i></a>  
         </div>
       </form> 
     </div>
   </div>
   <div class="bottom"> 
-    <p>Copyright © 2023 <a href="#">Divyansh Patel</a> All rights reserved</p>
+    <p><a href="credits.html">Credits</a>                                                 </p> 
   </div>
   <br><br><br> <br><br><br>  
 
@@ -414,48 +423,44 @@ const searchIcon = document.getElementById('search-icon');
 
 searchIcon.addEventListener('click', function() {
   const searchTerm = searchInput.value.toLowerCase();
+
+  const validExploreTerms = ['mountains', 'cities', 'beaches', 'adventure travel', 'backpacking', 'boutique hotels', 'camping', 'family vacation', 'festival tourism', 'group tours', 'historical sites', 'holiday packages', 'outdoor activities', 'resorts', 'road trips', 'beach', 'mountain', 'city', 'country', 'travel', 'explore', 'destination', 'tour'];
   
+  const validFAQTerms = ['question1', 'question2', 'question3', 'faq', 'help', 'assistance', 'enquiry', 'query', 'problem', 'solution', 'ques', 'question', 'answer', 'questions', 'answers', 'faq', 'frequently asked questions', 'frequently asked question', 'FAQ', 'Frequently Asked Questions', 'Ques'];
 
-  const validExploreTerms = ['mountains', 'cities', 'beaches', "adventure travel", "backpacking", "boutique hotels", "camping","family vacation", "festival tourism",
-        "group tours", "historical sites", "holiday packages", "outdoor activities", "resorts", "road trips",'beach','mountain','city','country','travel','explore','destination','tour',];
-  
+  const validYuvaClubsTerms = ['club1', 'club2', 'youth', 'activities', 'community', 'events', 'members', 'about yuva', 'youva', 'Youva Clubs', 'About Youva Clubs', 'Yuva Clubs', 'yuva', 'yuva club', 'about yuva club', 'club', 'Yuva', 'About Youva Clubs Details'];
 
-  const validFAQTerms = ['question1', 'question2', 'question3', 'faq', 'help', 'assistance', 'enquiry', 'query', 'problem', 'solution','ques','question','answer','questions','answers','faq','frequently asked questions','frequently asked question','FAQ','Frequently Asked Questions','Ques'];
+  const validAboutUsTerms = ['mission', 'history', 'team', 'vision', 'values', 'company', 'organization', 'about', 'contact', 'contact us', 'information', 'team', 'more about us', 'more', 'Contact Us', 'About us', 'Contact Information', 'details', 'email', 'e-mail address','credits','made by','Credential'];
 
+  const validGalleryTerms = ['nature', 'wildlife', 'landscape', 'architecture', 'art', 'portrait', 'travel', 'animals', 'plants','culture', 'events', 'vintage', 'black and white', 'modern', 'abstract', 'technology', 'history', 'scenery', 'people','music', 'movies','quotes', 'inspiration',  'holiday', 'vacation', 'memories', 'retro', 'classic','minimalistic', 'conceptual', 'experimental', 'creative', 'fun', 'emotional', 'dramatic', 'uplifting','places','tour','images','gallery','photos','scenery'];
 
-  const validYuvaClubsTerms = ['club1', 'club2', 'youth', 'activities', 'community', 'events', 'members','about yuva','youva','Youva Clubs','About Youva Clubs','Yuva Clubs','yuva','yuva club','about yuva club','club','Yuva','About Youva Clubs Details'];
-
-
-  const validAboutUsTerms = ['mission', 'history', 'team', 'vision', 'values', 'company', 'organization','about','contact','contact us','information','team','more about us','more','Contact Us','About us ','Contact Information','details','email','e-mail address'];
-
-  if (validExploreTerms.includes(searchTerm)) { 
-
+  if (validExploreTerms.includes(searchTerm)) {
     const exploreSection = document.getElementById('explore');
     exploreSection.scrollIntoView({ behavior: 'smooth' });
   } else if (validFAQTerms.includes(searchTerm)) {
-
     const faqSection = document.getElementById('faq');
     faqSection.scrollIntoView({ behavior: 'smooth' });
   } else if (validYuvaClubsTerms.includes(searchTerm)) {
-
     const yuvaClubsSection = document.getElementById('yuva');
     yuvaClubsSection.scrollIntoView({ behavior: 'smooth' });
   } else if (validAboutUsTerms.includes(searchTerm)) {
-
-    const aboutUsSection = document.getElementById('about'); 
+    const aboutUsSection = document.getElementById('about');
     aboutUsSection.scrollIntoView({ behavior: 'smooth' });
+  } else if (validGalleryTerms.includes(searchTerm)) {
+    const gallerySection = document.getElementById('gallery1');  
+    gallerySection.scrollIntoView({ behavior: 'smooth' });
   } else {
-
     searchInput.value = 'Invalid search term!';
-    searchInput.style.color = 'red'; 
-    searchInput.classList.add('shake'); 
+    searchInput.style.color = 'red';
+    searchInput.classList.add('shake');
     setTimeout(() => {
-      searchInput.classList.remove('shake'); 
-      searchInput.value = ''; 
-      searchInput.style.color = 'black'; 
-    }, 2000); 
+      searchInput.classList.remove('shake');            
+      searchInput.value = '';
+      searchInput.style.color = 'black';
+    }, 2000);
   }
 });
+
 
 //------------------------------------------------------------------------//
 
@@ -465,11 +470,12 @@ const searchSuggestions = document.getElementById('search-suggestions');
 
 const validTerms = ['mountains', 'cities', 'beaches', "adventure travel", "backpacking", "boutique hotels", "camping","family vacation", "festival tourism",
         "group tours", "historical sites", "holiday packages", "outdoor activities", "resorts", "road trips",'beach','mountain','city','country','travel','explore','destination','question1', 'question2', 'question3', 'faq', 'help', 'assistance', 'enquiry', 'query', 'problem', 'solution','ques','question','answer','questions','answers','faq','frequently asked questions','FAQ','Frequently Asked Questions','Ques','club1', 'club2', 'youth', 'activities', 'community', 'events', 'members','about yuva','Youva Clubs','About Youva Clubs','Yuva Clubs','yuva','yuva club','about yuva club','club','Yuva','About Youva Clubs Details',
-        'mission', 'history', 'team', 'vision', 'values', 'company', 'organization','about','contact','contact us','information','team','more about us','more','Contact Us','About us ','Contact Information','details','email','e-mail address' ];
+        'mission', 'history', 'team', 'vision', 'values', 'company', 'organization','about','contact','contact us','information','team','more about us','more','Contact Us','About us ','Contact Information','details','email','e-mail address'
+        ,'nature', 'wildlife', 'landscape', 'architecture', 'art', 'portrait', 'travel', 'animals', 'plants','culture', 'events', 'vintage', 'black and white', 'modern', 'abstract', 'technology', 'history', 'scenery', 'people','music', 'movies','quotes', 'inspiration',  'holiday', 'vacation', 'memories', 'retro', 'classic','minimalistic', 'conceptual', 'experimental', 'creative', 'fun', 'emotional', 'dramatic', 'uplifting','places','tour','images','gallery','photos','scenery','credential','credits' ]; 
 
 searchInput.addEventListener('input', function() {
     const searchTerm = searchInput.value.toLowerCase();
-    const matchingTerms = validTerms.filter(term => term.includes(searchTerm));
+    const matchingTerms = validTerms.filter(term => term.includes(searchTerm)); 
 
     
     searchSuggestions.innerHTML = '';

@@ -106,7 +106,7 @@ header ul a{
     font-size: 0.83rem;
 }
 
-/* Hide the regular navigation menu on small screens */
+
 nav ul {
     display: none;
 }
@@ -117,12 +117,12 @@ nav ul {
     cursor: pointer;
 }
 
-/* Show the hamburger icon on small screens */
+
 .hamburger {
     display: none;
 }
 
-/* Styles for the responsive navigation menu */
+
 nav ul.show {
     display: flex;
     flex-direction: column;
@@ -141,7 +141,7 @@ nav ul.show li {
     border-bottom: 1px solid #ccc;
 }
 
-/* Adjust styles for smaller screens */
+
 @media (max-width: 768px) {
     .logo {
         width: 75px;
@@ -166,7 +166,7 @@ nav ul.show li {
 }
 
 
-/* Styles for the expanded navigation menu */
+
 nav#navbar.show ul {
     display: flex;
     flex-direction: column;
@@ -182,11 +182,11 @@ nav#navbar.show ul {
  
  
 
-/* Default styles for larger screens */
+
 nav ul {
     display: flex;
     justify-content: flex-end;
-    transition: transform 0.5s ease; /* Add transition property */
+    transition: transform 0.5s ease;
 }
 
 nav li {
@@ -194,7 +194,7 @@ nav li {
     list-style: none;
 }
 
-/* Styles for smaller screens (max-width: 768px) */
+
 @media (max-width: 768px) {
     nav {
         display: flex;
@@ -213,13 +213,13 @@ nav li {
         top: 60px;
         left: 0;  
         z-index: 1; 
-        transform: translateY(-30%); /* Initially move the menu off-screen */
-        transition: transform 0.5s ease; /* Add transition property */  
+        transform: translateY(-30%); 
+        transition: transform 0.5s ease; 
     } 
 
     nav ul.show {
         transform: translateY(0);
-        transition: transform 0.5s ease; /* Move the menu back to its original position */
+        transition: transform 0.5s ease; 
     }
 
     nav li {
@@ -233,7 +233,7 @@ nav li {
  
 
 /*search bar*/
-/* Add this CSS for styling the search bar */
+
 .search-bar {
     display: flex; 
     align-items: center;
@@ -253,18 +253,17 @@ nav li {
     cursor: pointer;
   }
   
-  /* Add this CSS to make the search bar responsive */
+
   @media (max-width: 768px) {
     .search-bar {
       display: none; 
     }
   
-    /* Adjust the hamburger menu style for smaller screens */
     .hamburger {
       display: block;
     }
   
-    /* Show the search bar in the expanded header for smaller screens */
+
     nav#navbar.show .search-bar {
       display: flex;
     }
@@ -286,10 +285,10 @@ nav li {
   /*error text*/
   .error-text {
     color: red;
-    letter-spacing: 2px; /* Add 2px gap between characters */
+    letter-spacing: 2px; 
   }
   #search-input {
-    letter-spacing: 2px; /* Add 2px gap between characters in the search input */
+    letter-spacing: 2px; 
   }
  
   
@@ -299,11 +298,11 @@ nav li {
     max-width: 1010px;
     width: 100%;
     align-items: center;
-    justify-content: center; /* Center the accordion horizontally */
+    justify-content: center; 
     background: #fff;
     border-radius: 25px;
     padding: 45px 90px 45px 60px;
-    margin: 0 auto; /* Center the accordion horizontally */
+    margin: 0 auto; 
 }
 
 
@@ -314,11 +313,11 @@ nav li {
     max-width: 1010px;
     width: 100%;
     align-items: center;
-    justify-content: center; /* Center the accordion horizontally */
+    justify-content: center; 
     background: #e9ebea;
     border-radius: 25px; 
     padding: 45px 90px 45px 60px;
-    margin: 0 auto; /* Center the accordion horizontally */
+    margin: 0 auto;
 }
 
 
@@ -327,8 +326,8 @@ nav li {
 }
 
 .accordion1-text{ 
-  font-size: 1em; /* Set the initial font size */
-  transition: font-size 0.5s, text-shadow 0.5s; /* Apply transitions for font size and text shadow */
+  font-size: 1em; 
+  transition: font-size 0.5s, text-shadow 0.5s; 
 }
 
 .accordion1-text:hover {  
@@ -479,14 +478,14 @@ nav li {
 
 
 /* Suggestions */
-/* Suggestions */
+
 #search-suggestions {
   display: none;
   position: absolute;
   width: calc(100% - 20px);
   max-width: 300px;
   border: 1px solid #ccc;  padding: 10px;
-  top: 45px; /* Adjust the top position to place suggestions below the search box */
+  top: 45px;
   z-index: 9999; 
   background-color: whitesmoke;  
   border-radius: 10px;   
@@ -505,10 +504,10 @@ nav{
   border-radius: 10px;  
   transition: 0.5s ease-in-out;    
   background-color: #a8a4a4;
-  font-size: 1.5em;     
+  font-size: 1.2em;     
 }
 
-/* Adjust styles for smaller screens */
+
 @media (max-width: 768px) {
   nav {
       display: flex;
@@ -524,7 +523,7 @@ nav{
       text-align: center;
       background-color: #333;
       position: absolute;
-      top: calc(100% + 10px); /* Adjusted top position */
+      top: calc(100% + 10px); 
       left: 0;
       z-index: 1;
   }
@@ -541,7 +540,7 @@ nav{
       display: block;
   }
 
-  /* Show the search bar in the expanded header for smaller screens */
+
   nav#navbar.show .search-bar {
       display: flex;
   }
@@ -557,17 +556,14 @@ nav{
 
 /*footer*/
 
-/*footer*/
 
 
-
-/* Rest of your footer styles remain the same */
 body {
     height: 100vh;
   }
 
   
-  /*footer*/
+
   footer {
     display: flex; 
     width: 100%;
@@ -582,7 +578,7 @@ body {
     margin: 0 auto;
   }
   
-  /* Rest of your footer styles remain the same */
+
    
   footer .content{
     max-width: 1350px;

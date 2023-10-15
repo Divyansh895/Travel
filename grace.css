@@ -69,26 +69,145 @@ body{
   left: 20px;
 }
 
-.goback-button button {
-  background-color: #38c0d8;
-  color: white;
-  border: none; 
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none; 
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
+
+button {
+  margin: 20px;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
   border-radius: 5px;
-  transition: all 0.6s linear;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+
+/* 5 */
+.btn-5 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(140, 0, 255);
+
+}
+.btn-5:hover {
+  color: #f0094a;
+  background: transparent;
+   box-shadow:none;
+}
+.btn-5:before,
+.btn-5:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #f0094a;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+.btn-5:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-5:hover:before,
+.btn-5:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
+.book-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* Adjust the right property to move the button horizontally */
+  z-index: 9999;
+} 
+
+
+.custom-btn1 {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+
+/* 5 */
+.btn-51 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(255, 145, 0);
+
+}
+.btn-51:hover {
+  color: #34bfd8;
+  background: transparent;
+   box-shadow:none;
+}
+.btn-51:before,
+.btn-51:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #f0094a;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+.btn-51:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-51:hover:before,
+.btn-51:hover:after{
+  width:100%;
+  transition:800ms ease all;
 } 
  
-.goback-button button:hover {
-  background: linear-gradient(45deg, #54dbd0, #2196F3); 
-  border-radius: 50px; 
-  color: white;
-  text-decoration: underline;
-}  
  
 
 
@@ -121,30 +240,3 @@ body::-webkit-scrollbar {
     display: none;
   }
    
-
-  .book-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-  }
-   
-  .book-button button {
-    background-color: #ce3030;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none; 
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.6s linear;
-  } 
-   
-  .book-button button:hover {
-    background: linear-gradient(45deg, #54dbd0, #21f380); 
-    border-radius: 50px; 
-    color: white;
-    text-decoration: underline;
-  }  

@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="style.css">
   <meta http-equiv="X-pUA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" /> 
+  
+
 
 
 </head> 
@@ -20,6 +22,32 @@
 </audio>
  
 <body> 
+<!--loader-->
+
+<div class="loading">
+  <div class="loading-text">
+      <span class="loading-text-words">L</span>
+      <span class="loading-text-words">O</span>
+      <span class="loading-text-words">A</span>
+      <span class="loading-text-words">D</span>
+      <span class="loading-text-words">I</span>
+      <span class="loading-text-words">N</span>
+      <span class="loading-text-words">G</span>
+  </div>
+</div> 
+
+<!--popup-->
+<div class="popup-container" id="popupContainer">
+  <div class="popup">
+      <p>We hope that your experience is smooth</p>
+      <button class="btn-yes" onclick="handleYes()">Yes</button>
+      <button class="btn-no" onclick="handleNo()">No</button>
+  </div>
+</div> 
+
+
+<!------------------------------------------------------------------------------------> 
+
   <!-- //navbar  -->
   <header class="hide">
     <nav id="navbar">
@@ -212,7 +240,14 @@
 
 <img src="image13.jpg" class="img-responsive"> 
 <img src="image14.jpg" class="img-responsive">  
-<img src="image15.jpg" class="img-responsive">   
+<img src="image15.jpg" class="img-responsive"> 
+
+<img src="img16.jpg" class="img-responsive">      
+
+<img src="image17.jpg" class="img-responsive">   
+
+<img src="image18.jpg" class="img-responsive">   
+
 
 
 </div>
@@ -314,9 +349,9 @@
     </div>
 
     <div class="right box">
-      <div class="topic">Subscribe us</div>
-      <form action="#">
-        <input type="text" placeholder="Enter email address">
+      <div class="topic">Message us</div> 
+      <form id="messageForm">  
+        <input type="text" placeholder="Enter your message ">  
         <input type="submit" name="" value="Send">
         <div class="media-icons">
           <a href="https://www.instagram.com/coolgamerzx/"><i class="fab fa-instagram"></i></a>
@@ -356,8 +391,21 @@
 
 
 <script>
+//email// 
+document.getElementById("messageForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    var message = document.querySelector("#messageForm input[type='text']").value;   
+    var recipientEmail = "coolgamerz905@gmail.com";
+    var subject = "New Message from Yuva Tourism";
+    var emailBody = encodeURIComponent(message); // Encode the message for URL
+    
+    // Open Gmail compose page in a new tab with pre-filled recipient, subject, and pre-composed email body
+    window.open("https://mail.google.com/mail/u/0/?fs=1&tf=1&view=cm&to=" + recipientEmail + "&su=" + subject + "&body=" + emailBody, "_blank");
+});
 
   
+
   document.querySelector('.hamburger').addEventListener('click', function() {
     document.querySelector('nav ul').classList.toggle('show');
   });
@@ -621,6 +669,53 @@ let li = document.querySelectorAll(".faq-text li");
        clickedLi.classList.toggle("showAnswer");
       });
     }  
+
+
+    //loader//
+document.addEventListener("DOMContentLoaded", function() {
+
+setTimeout(function() {
+  var loaderWrapper = document.querySelector(".loading");  
+  loaderWrapper.style.display = "none";
+}, 4000); 
+});  
+
+/*pop up */
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        document.getElementById("popupContainer").style.display = "flex";
+    }, 30000); 
+}); 
+
+function handleYes() {
+    alert("Thank you for your feedback!");
+    closePopup();
+}
+
+function handleNo() {
+    alert("We're sorry to hear that. Thank you!");
+    closePopup();
+}
+
+function closePopup() {
+    document.getElementById("popupContainer").style.display = "none";
+}
+ 
+
+// Show the popup
+function showPopup() {
+    document.querySelector('.popup-container').style.display = 'flex';
+    document.body.classList.add('popup-active'); // Add the class to body to stop scrolling
+}
+
+// Hide the popup
+function hidePopup() {
+    document.querySelector('.popup-container').style.display = 'none';
+    document.body.classList.remove('popup-active'); // Remove the class to enable scrolling
+}
+
+
+
 </script> 
 <style>
   #yuva {
@@ -724,6 +819,106 @@ let li = document.querySelectorAll(".faq-text li");
 }
 .modal-body{
   padding:0px;
+}
+
+
+ /*loader*/
+ @import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+} 
+
+.loading-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%; 
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.loading-text span { 
+  font-size: 2.5em;  
+  display: inline-block;
+  margin: 0 5px;
+  color: #f0d01b;
+  font-family: 'Quattrocento Sans', sans-serif;
+  filter: blur(0px);
+  animation: blur-text 1.5s infinite linear alternate;
+}
+
+@keyframes blur-text {
+  0% {
+      filter: blur(0px);
+  }
+  100% {
+      filter: blur(4px);
+  }
+}
+  
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.7);
+}
+
+.btn-yes, .btn-no {
+    margin: 10px;              
+    border-radius: 20px;       
+    padding: 15px 30px;
+    cursor: pointer;
+    background: #ffffff;
+    border-color: #f0d01b; 
+    border-width: 1.5px;  
+    color: #000000;
+    font-size: 1em; 
+    transition: 0.5s; 
+}
+
+.btn-yes:hover, .btn-no:hover {
+    background: #050505;
+    color: #fff; 
+    font-size: 1.5em;  
+    border-radius: 30px; 
+} 
+
+.btn-yes:focus, .btn-no:focus {
+    outline: none;
+}
+
+
+
+
+body.popup-active {
+    overflow: hidden; 
 }
 
 
